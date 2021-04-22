@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net5.0;netcoreapp3.1</TargetFrameworks>
+
+    <Title>QuikGraph.Data.Tests</Title>
+
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
+
+    <Copyright>Copyright © 2020</Copyright>
+    <Description>Tests for QuikGraph.Data library.</Description>
+  </PropertyGroup>
+
+  <!-- Targets defines -->
+  <PropertyGroup Condition="'$(TargetFramework)'=='net5.0'">
+    <DefineConstants>$(DefineConstants);NET50;$(AdditionalConstants)</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp3.1'">
+    <DefineConstants>$(DefineConstants);NETCOREAPP3_1;$(AdditionalConstants)</DefineConstants>
+  </PropertyGroup>
+
+  <!-- Dependencies -->
+  <!-- Shared Projects -->
+  <Import Project="..\..\src\QuikGraph.CommonInternals\QuikGraph.CommonInternals.projitems" Label="Shared" />
+
+  <!-- Projects -->
+  <!-- QuikGraph.Data reference -->
+  <ItemGroup Condition="$(UseQuikGraphDataNuget)">
+    <PackageReference Include="QuikGraph.Data" Version="2.2.0" />
+  </ItemGroup>
+  <ItemGroup Condition="!$(UseQuikGraphDataNuget)">
+    <ProjectReference Include="..\..\src\QuikGraph.Data\QuikGraph.Data.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="16.9.4" />
+    <PackageReference Update="NUnit" Version="3.13.1" />
+  </ItemGroup>
+</Project>

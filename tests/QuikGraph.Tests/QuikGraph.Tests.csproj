@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net5.0;netcoreapp3.1</TargetFrameworks>
+
+    <Title>QuikGraph.Tests</Title>
+
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
+
+    <Copyright>Copyright © 2019</Copyright>
+    <Description>Tests for QuikGraph library.</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(DeployBuild)">
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\QuikGraph.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <!-- Targets defines -->
+  <PropertyGroup Condition="'$(TargetFramework)'=='net5.0'">
+    <DefineConstants>$(DefineConstants);NET50;SUPPORTS_SERIALIZATION;SUPPORTS_CLONEABLE;SUPPORTS_GRAPHS_SERIALIZATION;SUPPORTS_CONVERTER;SUPPORTS_TYPE_FULL_FEATURES;SUPPORTS_SORTEDSET;SUPPORTS_ENUMERABLE_COVARIANT;SUPPORTS_XML_DTD_PROCESSING;SUPPORTS_CRYPTO_RANDOM;SUPPORTS_TASKS;$(AdditionalConstants)</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp3.1'">
+    <DefineConstants>$(DefineConstants);NETCOREAPP3_1;SUPPORTS_SERIALIZATION;SUPPORTS_CLONEABLE;SUPPORTS_GRAPHS_SERIALIZATION;SUPPORTS_CONVERTER;SUPPORTS_TYPE_FULL_FEATURES;SUPPORTS_SORTEDSET;SUPPORTS_ENUMERABLE_COVARIANT;SUPPORTS_XML_DTD_PROCESSING;SUPPORTS_CRYPTO_RANDOM;SUPPORTS_TASKS;$(AdditionalConstants)</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(ProjectDir)GraphML\**" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <!-- Dependencies -->
+  <!-- Shared Projects -->
+  <Import Project="..\QuikGraph.Serialization.Tests.CommonInternals\QuikGraph.Serialization.Tests.CommonInternals.projitems" Label="Shared" />
+
+  <!-- QuikGraph reference -->
+  <ItemGroup Condition="$(UseQuikGraphCoreNuget)">
+    <PackageReference Include="QuikGraph" Version="2.2.0" />
+  </ItemGroup>
+  <ItemGroup Condition="!$(UseQuikGraphCoreNuget)">
+    <ProjectReference Include="..\..\src\QuikGraph\QuikGraph.csproj" />
+  </ItemGroup>
+  <!-- QuikGraph.Serialization reference -->
+  <ItemGroup Condition="$(UseQuikGraphSerializationNuget)">
+    <PackageReference Include="QuikGraph.Serialization" Version="2.2.1" />
+  </ItemGroup>
+  <ItemGroup Condition="!$(UseQuikGraphSerializationNuget)">
+    <ProjectReference Include="..\..\src\QuikGraph.Serialization\QuikGraph.Serialization.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="16.9.4" />
+    <PackageReference Update="NUnit" Version="3.13.1" />
+  </ItemGroup>
+</Project>
