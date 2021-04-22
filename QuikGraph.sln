@@ -43,13 +43,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuikGraph.MSAGL.Tests", "te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuikGraph.Petri.Tests", "tests\QuikGraph.Petri.Tests\QuikGraph.Petri.Tests.csproj", "{CD993F58-A275-4E67-9F8E-BAF3BE6F21B6}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuikGraph.Samples", "src\Tmp\QuikGraph.Samples\QuikGraph.Samples.csproj", "{EF5AD2CC-E518-41AE-A1F2-0A0AB09FB891}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		src\QuikGraph.CommonInternals\QuikGraph.CommonInternals.projitems*{69dfd21c-d3a3-4764-b3f0-2fdf612e1f65}*SharedItemsImports = 5
-		src\QuikGraph.CommonInternals\QuikGraph.CommonInternals.projitems*{908fe868-7abe-4fe8-bfa6-c5e6572b780d}*SharedItemsImports = 5
-		src\QuikGraph.CommonInternals\QuikGraph.CommonInternals.projitems*{7160ddab-12b0-491f-9a79-bf3b5e0cd872}*SharedItemsImports = 5
 		tests\QuikGraph.Serialization.Tests.CommonInternals\QuikGraph.Serialization.Tests.CommonInternals.projitems*{61df76e1-de2b-4df1-ad5f-89939ab06693}*SharedItemsImports = 5
+		src\QuikGraph.CommonInternals\QuikGraph.CommonInternals.projitems*{69dfd21c-d3a3-4764-b3f0-2fdf612e1f65}*SharedItemsImports = 5
+		src\QuikGraph.CommonInternals\QuikGraph.CommonInternals.projitems*{7160ddab-12b0-491f-9a79-bf3b5e0cd872}*SharedItemsImports = 5
 		tests\QuikGraph.Serialization.Tests.CommonInternals\QuikGraph.Serialization.Tests.CommonInternals.projitems*{8adddae1-fa2c-4637-c67f-8743beb126cd}*SharedItemsImports = 5
+		src\QuikGraph.CommonInternals\QuikGraph.CommonInternals.projitems*{908fe868-7abe-4fe8-bfa6-c5e6572b780d}*SharedItemsImports = 5
 		tests\QuikGraph.Serialization.Tests.CommonInternals\QuikGraph.Serialization.Tests.CommonInternals.projitems*{98e60a67-c326-4b83-8eff-b77e9c651945}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{CD993F58-A275-4E67-9F8E-BAF3BE6F21B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD993F58-A275-4E67-9F8E-BAF3BE6F21B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD993F58-A275-4E67-9F8E-BAF3BE6F21B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF5AD2CC-E518-41AE-A1F2-0A0AB09FB891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF5AD2CC-E518-41AE-A1F2-0A0AB09FB891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF5AD2CC-E518-41AE-A1F2-0A0AB09FB891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF5AD2CC-E518-41AE-A1F2-0A0AB09FB891}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

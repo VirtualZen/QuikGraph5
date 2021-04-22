@@ -1,13 +1,21 @@
 ﻿using System;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using QuickGraph.Algorithms;
+//using QuickGraph.Algorithms;
+using QuikGraph;
+using QuikGraph.Algorithms;
 
 namespace QuickGraph.Samples
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [TestClass]
     public partial class GraphCreation
     {
+        /// <summary>
+        /// 
+        /// </summary>
         [TestMethod]
         public void EdgeArrayToAdjacencyGraph()
         {
@@ -18,6 +26,9 @@ namespace QuickGraph.Samples
             var graph = edges.ToAdjacencyGraph<int, SEdge<int>>();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [TestMethod]
         public void DelegateGraph()
         {
@@ -36,7 +47,7 @@ namespace QuickGraph.Samples
                 );
 
             // it's ready to use!
-            foreach (var v in g.TopologicalSort())
+            foreach (int v in g.TopologicalSort())
                 Console.WriteLine(v);
         }
     }
