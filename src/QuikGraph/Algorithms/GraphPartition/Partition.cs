@@ -1,8 +1,7 @@
-﻿#if SUPPORTS_SORTEDSET
+#if SUPPORTS_SORTEDSET
 using System.Collections.Generic;
 #else
-//using QuikGraph.Collections;
-using System.Collections.Generic;
+using QuikGraph.Collections;
 #endif
 using JetBrains.Annotations;
 
@@ -38,8 +37,8 @@ namespace QuikGraph.Algorithms.GraphPartition
         /// <param name="vertexSetB">Second partition vertex set.</param>
         /// <param name="cutCost">Cost of the partition cut.</param>
         public Partition(
-            [NotNull, ItemNotNull] System.Collections.Generic.SortedSet<TVertex> vertexSetA,
-            [NotNull, ItemNotNull] System.Collections.Generic.SortedSet<TVertex> vertexSetB, 
+            [NotNull, ItemNotNull] SortedSet<TVertex> vertexSetA,
+            [NotNull, ItemNotNull] SortedSet<TVertex> vertexSetB, 
             double cutCost = 0)
         {
             VertexSetA = vertexSetA;

@@ -1,7 +1,6 @@
-﻿#if SUPPORTS_SERIALIZATION || SUPPORTS_CLONEABLE
+#if SUPPORTS_SERIALIZATION || SUPPORTS_CLONEABLE
 using System;
 #endif
-//using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -109,11 +108,6 @@ namespace QuikGraph.Petri
             _graph.AddEdge(arc);
             return arc;
         }
-
-        //public static explicit operator ICloneable(PetriNet<int> v)
-        //{
-        //    throw new NotImplementedException();
-        //}
 
         #endregion
 

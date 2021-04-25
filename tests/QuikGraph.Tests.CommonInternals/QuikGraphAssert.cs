@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
+//using System.Diagnostics.CodeAnalysis;
 using JetBrains.Annotations;
 using NUnit.Framework;
-using NotNullAttribute = JetBrains.Annotations.NotNullAttribute;
 
 namespace QuikGraph.Tests
 {
@@ -276,7 +275,8 @@ namespace QuikGraph.Tests
         /// Enumerates the specified <paramref name="enumerable"/> in a double "for each".
         /// </summary>
         /// <param name="enumerable">Enumerable.</param>
-        [SuppressMessage("ReSharper", "PossibleMultipleEnumeration")]
+        //[SuppressMessage("ReSharper", "PossibleMultipleEnumeration")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("ReSharper", "PossibleMultipleEnumeration")]
         public static void DoubleForEach<T>(IEnumerable<T> enumerable)
         {
             Assert.IsNotNull(enumerable);

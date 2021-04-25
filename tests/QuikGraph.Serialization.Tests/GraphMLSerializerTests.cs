@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection.Emit;
@@ -105,7 +105,7 @@ namespace QuikGraph.Serialization.Tests
                     using (var writer = new StringWriter())
                     {
                         var settings = new XmlWriterSettings { Indent = true };
-                        using (var xmlWriter = XmlWriter.Create(writer, settings))
+                        using (XmlWriter xmlWriter = XmlWriter.Create(writer, settings))
                         {
                             var serializer = new GraphMLSerializer<EquatableTestVertex, EquatableTestEdge, EquatableTestGraph>
                             {
@@ -139,7 +139,7 @@ namespace QuikGraph.Serialization.Tests
                             DtdProcessing = DtdProcessing.Ignore
                         };
 
-                        using (var xmlReader = XmlReader.Create(reader, settings))
+                        using (XmlReader xmlReader = XmlReader.Create(reader, settings))
                         {
 #else
                         var xmlReader = new XmlTextReader(reader);
@@ -222,7 +222,7 @@ namespace QuikGraph.Serialization.Tests
                     vertex => vertex.ID,
                     edge => edge.ID));
 
-            using (var writer = XmlWriter.Create(WriteThrowsTestFilePath))
+            using (XmlWriter writer = XmlWriter.Create(WriteThrowsTestFilePath))
             {
                 Assert.Throws<ArgumentNullException>(
                     () => ((AdjacencyGraph<TestVertex, TestEdge>) null).SerializeToGraphML<TestVertex, TestEdge, AdjacencyGraph<TestVertex, TestEdge>>(writer));
@@ -330,7 +330,7 @@ namespace QuikGraph.Serialization.Tests
                     ValidationFlags = XmlSchemaValidationFlags.ReportValidationWarnings
                 };
 
-                using (var reader = XmlReader.Create(graphMLFilePath, settings))
+                using (XmlReader reader = XmlReader.Create(graphMLFilePath, settings))
                 {
 #else
                 using (var reader = new XmlTextReader(graphMLFilePath))
@@ -428,7 +428,7 @@ namespace QuikGraph.Serialization.Tests
                     id => id,
                     (source, target, id) => new Edge<string>(source, target)));
 
-            using (var reader = XmlReader.Create(GetGraphFilePath(TestGraphFileName)))
+            using (XmlReader reader = XmlReader.Create(GetGraphFilePath(TestGraphFileName)))
             {
                 Assert.Throws<ArgumentNullException>(
                     () => ((AdjacencyGraph<string, Edge<string>>) null).DeserializeFromGraphML(
@@ -586,7 +586,7 @@ namespace QuikGraph.Serialization.Tests
             using (var writer = new StringWriter())
             {
                 var settings = new XmlWriterSettings { Indent = true };
-                using (var xmlWriter = XmlWriter.Create(writer, settings))
+                using (XmlWriter xmlWriter = XmlWriter.Create(writer, settings))
                 {
                     graph.SerializeToGraphML<TestVertex, TestEdge, TestGraph>(xmlWriter);
                 }
@@ -602,7 +602,7 @@ namespace QuikGraph.Serialization.Tests
             using (var writer = new StringWriter())
             {
                 var settings = new XmlWriterSettings { Indent = true };
-                using (var xmlWriter = XmlWriter.Create(writer, settings))
+                using (XmlWriter xmlWriter = XmlWriter.Create(writer, settings))
                 {
                     graph.SerializeToGraphML<TestVertex, TestEdge, TestGraph>(
                         xmlWriter,

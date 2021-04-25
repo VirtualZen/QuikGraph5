@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
+//using System.Diagnostics.CodeAnalysis;
 using JetBrains.Annotations;
 using NUnit.Framework;
 using QuikGraph.Graphviz.Dot;
-using NotNullAttribute = JetBrains.Annotations.NotNullAttribute;
 
 namespace QuikGraph.Graphviz.Tests
 {
@@ -71,7 +70,7 @@ namespace QuikGraph.Graphviz.Tests
         }
 
         [Test]
-        [SuppressMessage("ReSharper", "ReturnValueOfPureMethodIsNotUsed")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("ReSharper", "ReturnValueOfPureMethodIsNotUsed")]
         public void FormatHandlers()
         {
             var graph = new AdjacencyGraph<int, Edge<int>>();

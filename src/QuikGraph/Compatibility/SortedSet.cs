@@ -1,4 +1,4 @@
-﻿#if !SUPPORTS_SORTEDSET
+#if !SUPPORTS_SORTEDSET
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -426,7 +426,7 @@ namespace QuikGraph.Collections
 
             Debug.Assert(parent != null, "Parent node cannot be null here!");
             // ready to insert the new node
-            var node = new Node(item);
+            Node node = new Node(item);
             if (order > 0)
             {
                 parent.Right = node;
@@ -696,7 +696,7 @@ namespace QuikGraph.Collections
             }
             else
             {
-                object[] objects = array as object[];
+                var objects = array as object[];
                 if (objects is null)
                     throw new ArgumentException("Invalid array type.");
 
@@ -1454,7 +1454,7 @@ namespace QuikGraph.Collections
         {
             get
             {
-                var ret = default(T);
+                T ret = default(T);
                 InOrderTreeWalk(n =>
                 {
                     ret = n.Item;
@@ -1471,7 +1471,7 @@ namespace QuikGraph.Collections
         {
             get
             {
-                var ret = default(T);
+                T ret = default(T);
                 InOrderTreeWalk(n =>
                 {
                     ret = n.Item;
@@ -1484,10 +1484,10 @@ namespace QuikGraph.Collections
         /// <summary>
         /// Reverses the order of this set.
         /// </summary>
-        [JetBrains.Annotations.NotNull, ItemCanBeNull]
+        [NotNull, ItemCanBeNull]
         public IEnumerable<T> Reverse()
         {
-            var e = new Enumerator(this, true);
+            Enumerator e = new Enumerator(this, true);
             while (e.MoveNext())
             {
                 yield return e.Current;
@@ -1837,25 +1837,6 @@ namespace QuikGraph.Collections
                 value >>= 1;
             }
             return c;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="info"></param>
-        /// <param name="context"></param>
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        public void OnDeserialization(object sender)
-        {
-            throw new NotImplementedException();
         }
 
         #endregion

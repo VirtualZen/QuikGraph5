@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using JetBrains.Annotations;
 using System.Linq;
 #if !SUPPORTS_SORTEDSET
-//using QuikGraph.Collections;
+using QuikGraph.Collections;
 #endif
 
 namespace QuikGraph.Algorithms.GraphPartition
@@ -21,11 +21,11 @@ namespace QuikGraph.Algorithms.GraphPartition
         private readonly int _nbIterations;
         private readonly int _partitionSize;
 
-        private System.Collections.Generic.SortedSet<TVertex> _vertexSetA;
-        private System.Collections.Generic.SortedSet<TVertex> _vertexSetB;
+        private SortedSet<TVertex> _vertexSetA;
+        private SortedSet<TVertex> _vertexSetB;
 
-        private System.Collections.Generic.SortedSet<TVertex> _unSwappedSetA;
-        private System.Collections.Generic.SortedSet<TVertex> _unSwappedSetB;
+        private SortedSet<TVertex> _unSwappedSetA;
+        private SortedSet<TVertex> _unSwappedSetB;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="KernighanLinAlgorithm{TVertex,TEdge}"/> class.
@@ -162,9 +162,9 @@ namespace QuikGraph.Algorithms.GraphPartition
         }
 
         private static void SwapVertices(
-            [NotNull, ItemNotNull] System.Collections.Generic.ISet<TVertex> setA,
+            [NotNull, ItemNotNull] ISet<TVertex> setA,
             [NotNull] TVertex vertexA,
-            [NotNull, ItemNotNull] System.Collections.Generic.ISet<TVertex> setB,
+            [NotNull, ItemNotNull] ISet<TVertex> setB,
             [NotNull] TVertex vertexB)
         {
             Debug.Assert(setA != null);

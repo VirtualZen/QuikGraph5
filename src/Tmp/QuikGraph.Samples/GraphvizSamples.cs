@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+//using QuickGraph.Graphviz;
 using QuikGraph;
 using QuikGraph.Graphviz;
-//using QuickGraph.Graphviz;
 
 namespace QuickGraph.Samples
 {

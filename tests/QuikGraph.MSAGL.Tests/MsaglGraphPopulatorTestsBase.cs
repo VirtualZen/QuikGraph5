@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
+//using System.Diagnostics.CodeAnalysis;
 using JetBrains.Annotations;
 using NUnit.Framework;
 using static QuikGraph.MSAGL.Tests.MsaglGraphTestHelpers;
@@ -13,7 +13,7 @@ namespace QuikGraph.MSAGL.Tests
     internal class MsaglGraphPopulatorTestsBase
     {
         protected static void Compute_Test<TPopulator>(
-            [JetBrains.Annotations.NotNull, InstantHandle] Func<IEdgeListGraph<int, Edge<int>>, TPopulator> createPopulator)
+            [NotNull, InstantHandle] Func<IEdgeListGraph<int, Edge<int>>, TPopulator> createPopulator)
             where TPopulator : MsaglGraphPopulator<int, Edge<int>>
         {
             // Empty graph
@@ -83,9 +83,9 @@ namespace QuikGraph.MSAGL.Tests
             AssertAreEquivalent(undirectedGraph, populator.MsaglGraph);
         }
 
-        [SuppressMessage("ReSharper", "AccessToModifiedClosure")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("ReSharper", "AccessToModifiedClosure")]
         protected static void Handlers_Test<TPopulator>(
-            [JetBrains.Annotations.NotNull, InstantHandle] Func<IEdgeListGraph<int, Edge<int>>, TPopulator> createPopulator)
+            [NotNull, InstantHandle] Func<IEdgeListGraph<int, Edge<int>>, TPopulator> createPopulator)
             where TPopulator : MsaglGraphPopulator<int, Edge<int>>
         {
             // Empty graph

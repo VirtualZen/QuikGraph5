@@ -1,9 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Diagnostics.CodeAnalysis;
+//using System.Diagnostics.CodeAnalysis;
 using System.Xml.Serialization;
 using JetBrains.Annotations;
-using NotNullAttribute = JetBrains.Annotations.NotNullAttribute;
 
 namespace QuikGraph.Serialization.Tests
 {
@@ -120,7 +119,7 @@ namespace QuikGraph.Serialization.Tests
             return Equals(obj as EquatableTestEdge);
         }
 
-        [SuppressMessage("ReSharper", "NonReadonlyMemberInGetHashCode")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("ReSharper", "NonReadonlyMemberInGetHashCode")]
         public override int GetHashCode()
         {
             unchecked

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -6,7 +6,7 @@ using JetBrains.Annotations;
 using QuikGraph.Algorithms.Search;
 using QuikGraph.Algorithms.Services;
 #if !SUPPORTS_SORTEDSET
-//using QuikGraph.Collections;
+using QuikGraph.Collections;
 #endif
 
 namespace QuikGraph.Algorithms.ConnectedComponents
