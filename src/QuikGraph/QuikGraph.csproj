@@ -3,18 +3,18 @@
   <PropertyGroup>
     <TargetFrameworks>net35;net40;net45;net451;net452;net46;net461;net462;net47;net471;net472;net48;netstandard1.3;netstandard2.0;netstandard2.1;net5.0</TargetFrameworks>
 
-    <GeneratePackageOnBuild>$(Generate_QuikGraph_Core)</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
     <Title>QuikGraph</Title>
     <RootNamespace>QuikGraph</RootNamespace>
     <AssemblyName>QuikGraph</AssemblyName>
 
     <!-- Overridden by CI -->
-    <Version>0.0.0</Version>
-    <AssemblyVersion>0.0.0</AssemblyVersion>
-    <FileVersion>0.0.0</FileVersion>
+    <Version>2.3.0</Version>
+    <AssemblyVersion>2.3.0</AssemblyVersion>
+    <FileVersion>2.3.0</FileVersion>
 
-    <Copyright>Copyright © 2019</Copyright>
+      <Copyright>Copyright © 2019</Copyright>
     <Description>.NET library that provide mainly graphs structures and algorithms for C#.
 
 QuikGraph provides generic directed/undirected graph data structures and algorithms for .NET. It comes with algorithms such as depth first seach, breath first search, A* search, shortest path, k-shortest path, maximum flow, etc...

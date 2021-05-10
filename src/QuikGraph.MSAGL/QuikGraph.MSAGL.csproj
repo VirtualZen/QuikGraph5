@@ -3,18 +3,18 @@
   <PropertyGroup>
       <TargetFrameworks>net461;net462;net47;net471;net472;net48;netstandard2.0;netstandard2.1;net5.0</TargetFrameworks>
 
-    <GeneratePackageOnBuild>$(Generate_QuikGraph_MSAGL)</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
     <Title>QuikGraph.MSAGL</Title>
     <RootNamespace>QuikGraph.MSAGL</RootNamespace>
     <AssemblyName>QuikGraph.MSAGL</AssemblyName>
 
     <!-- Overridden by CI -->
-    <Version>0.0.0</Version>
-    <AssemblyVersion>0.0.0</AssemblyVersion>
-    <FileVersion>0.0.0</FileVersion>
+    <Version>2.3.0</Version>
+    <AssemblyVersion>2.3.0</AssemblyVersion>
+    <FileVersion>2.3.0</FileVersion>
 
-    <Copyright>Copyright © 2020</Copyright>
+      <Copyright>Copyright © 2020</Copyright>
     <Description>.NET library that provides a bridge from QuikGraph graphs to MSAGL library.
 
 This package is the MSAGL subset of the original QuickGraph renamed QuikGraph and ported to .NET Core.
