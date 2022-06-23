@@ -23,15 +23,23 @@ Supported platforms:
 - .NET Standard 1.3+
 - .NET Core 1.0+
 - .NET Framework 3.5+
+- .NET Core 5.0
+- .NET Framework 4.8
 
-Supports Source Link</Description>
+Supports Source Link
+
+Original from: https://github.com/KeRNeLith/QuikGraph</Description>
 
     <IsPackable>true</IsPackable>
-    <PackageId>QuikGraph.Serialization</PackageId>
+    <PackageId>VirtualQuikGraph5.Serialization</PackageId>
     <PackageReleaseNotes>➟ Release 2.3.0
 Updates:
 - Update package dependencies.</PackageReleaseNotes>
     <PackageTags>QuickGraph QuikGraph Graph Structure Algorithm C# .NET Serialization</PackageTags>
+    <PackageProjectUrl>https://github.com/VirtualZen/QuikGraph5</PackageProjectUrl>
+    <Product>QuikGraph5.Serialization</Product>
+    <Authors>Alexandre Rabérin - VirtualZen</Authors>
+    <Company>VirtualZen</Company>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' != 'netstandard1.3'">

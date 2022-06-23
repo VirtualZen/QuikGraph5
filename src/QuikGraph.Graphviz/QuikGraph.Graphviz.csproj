@@ -23,11 +23,15 @@ Supported platforms:
 - .NET Standard 1.3+
 - .NET Core 1.0+
 - .NET Framework 3.5+
+- .NET Core 5.0
+- .NET Framework 4.8
 
-Supports Source Link</Description>
+Supports Source Link
+
+Original from: https://github.com/KeRNeLith/QuikGraph</Description>
 
     <IsPackable>true</IsPackable>
-    <PackageId>QuikGraph.Graphviz</PackageId>
+    <PackageId>VirtualQuikGraph5.Graphviz</PackageId>
     <PackageReleaseNotes>➟ Release 2.3.0
 Updates:
 - Update package dependencies.
@@ -35,6 +39,10 @@ Updates:
 New:
 - Make all Dot structures serializable.</PackageReleaseNotes>
     <PackageTags>QuickGraph QuikGraph Graph Structure Algorithm C# .NET Serialization Graphviz</PackageTags>
+    <PackageProjectUrl>https://github.com/VirtualZen/QuikGraph5</PackageProjectUrl>
+    <Product>QuikGraph5.Graphviz</Product>
+    <Authors>Alexandre Rabérin - VirtualZen</Authors>
+    <Company>VirtualZen</Company>
   </PropertyGroup>
 
   <!-- Targets defines -->

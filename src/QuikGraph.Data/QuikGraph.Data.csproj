@@ -19,18 +19,31 @@
 This package is a subset related to DataTable of the original QuickGraph renamed QuikGraph and ported to .NET Core.
 
 Supported platforms:
-- .NET Standard 2.0+
-- .NET Core 2.0+
-- .NET Framework 3.5+
 
-Supports Source Link</Description>
+- .NET Standard 2.0+
+
+- .NET Core 2.0+
+
+- .NET Framework 3.5+
+- .NET Core 5.0
+- .NET Framework 4.8
+
+
+
+Supports Source Link
+
+Original from: https://github.com/KeRNeLith/QuikGraph</Description>
 
     <IsPackable>true</IsPackable>
-    <PackageId>QuikGraph.Data</PackageId>
+    <PackageId>VirtualQuikGraph5.Data</PackageId>
     <PackageReleaseNotes>➟ Release 2.3.0
 Updates:
 - Update package dependencies.</PackageReleaseNotes>
     <PackageTags>QuickGraph QuikGraph Graph Structure Algorithm C# .NET Serialization Data</PackageTags>
+    <PackageProjectUrl>https://github.com/VirtualZen/QuikGraph5</PackageProjectUrl>
+    <Product>QuikGraph5.Data</Product>
+    <Authors>Alexandre Rabérin - VirtualZen</Authors>
+    <Company>VirtualZen</Company>
   </PropertyGroup>
 
   <!-- Targets defines -->
